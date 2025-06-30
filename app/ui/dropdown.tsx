@@ -65,7 +65,7 @@ export default function CustomDropdown<T extends DropdownOptionBase>({
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
-        className=" border border-gray-300 rounded-md px-1 md:px-4 py-1 md:py-2 text-left  shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+        className=" border border-gray-300 rounded-md px-1 md:px-1 py-1 md:py-1 text-left text-sm  shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
       >
         {selected ? selected.name : placeholder}
       </button>
@@ -78,7 +78,7 @@ export default function CustomDropdown<T extends DropdownOptionBase>({
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search..."
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-teal-500"
+              className="text-sm w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-teal-500"
             />
           </div>
           <ul className="max-h-48 overflow-y-auto divide-y divide-gray-100">
@@ -87,7 +87,7 @@ export default function CustomDropdown<T extends DropdownOptionBase>({
                 <li
                   key={option.id}
                   onClick={() => handleSelect(option)}
-                  className="cursor-pointer px-4 py-3 hover:bg-teal-100 whitespace-pre-wrap"
+                  className="text-sm cursor-pointer px-4 py-3 hover:bg-teal-100 whitespace-pre-wrap"
                 >
                   {option.name} <br />
                   {option.bin}

@@ -125,7 +125,7 @@ export default function TopNav({
           {/* Bell SVG */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-7 text-gray-600"
+            className="h-6 w-6 text-gray-600"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -165,10 +165,6 @@ export default function TopNav({
               height={30}
               className="rounded-full"
             />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-sm font-medium">{userInfo?.name}</span>
-            <span className="text-xs text-gray-500">{userInfo?.email}</span>
           </div>
         </div>
       </div>

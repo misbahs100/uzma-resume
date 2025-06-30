@@ -10,6 +10,7 @@ import {
   WrenchScrewdriverIcon,
   BellAlertIcon,
   AdjustmentsHorizontalIcon,
+  CalculatorIcon,
 } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Link from "next/link";
@@ -19,22 +20,18 @@ const links = [
   { name: "Home", href: "/dashboard", icon: HomeIcon },
   { name: "Offices", href: "/dashboard/offices", icon: ShareIcon },
   { name: "Add Vehicle", href: "/dashboard/vehicles-entry", icon: TruckIcon },
-
   {
     name: "Manage Vehicles",
     href: "/dashboard/vehicles-management",
     icon: AdjustmentsHorizontalIcon,
   },
-
   {
     name: "Bookings",
     href: "/dashboard/bookings",
     icon: ArrowRightStartOnRectangleIcon,
   },
-
   { name: "Inventory", href: "/dashboard/inventory", icon: CircleStackIcon },
   { name: "Reports", href: "/dashboard/reports", icon: BookOpenIcon },
-
   {
     name: "Repair Memo",
     href: "/dashboard/repair",
@@ -45,6 +42,7 @@ const links = [
     href: "/dashboard/notification",
     icon: BellAlertIcon,
   },
+  { name: "Dual-Accounting", href: "https://ex-tra-theta.vercel.app/", icon: CalculatorIcon },
   { name: "Users", href: "/dashboard/users", icon: UsersIcon },
 ];
 
@@ -53,7 +51,7 @@ export default function NavLinks({ userRole }: { userRole: string | null }) {
   return (
     <>
       {links.map((link) => {
-         if(userRole === "manager" && link.href === "/dashboard/users") return;
+        if (userRole === "manager" && link.href === "/dashboard/users") return;
         const LinkIcon = link.icon;
         return (
           <Link
